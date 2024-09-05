@@ -5,11 +5,11 @@ from flask_login import LoginManager
 
 app = Flask(__name__,template_folder='../templates',static_folder='../assets',static_url_path='/assets')
 
-# app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:12345678@localhost:3306/myblog_db'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-# app.config['SECRET_KEY']='ec9439cfc6c79ae2029594d'
-# db = SQLAlchemy(app)
-# login_manager = LoginManager()
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:12345678@localhost:3306/myblog_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+app.config['SECRET_KEY']='ec9439cfc6c79ae2029594d'
+db = SQLAlchemy(app)
+login_manager = LoginManager()
 
 from routes import user_routes
 from routes import admin_routes
