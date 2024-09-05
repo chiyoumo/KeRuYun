@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from flask_login import LoginManager
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='../templates',static_folder='../assets',static_url_path='/assets')
 
 # app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:12345678@localhost:3306/myblog_db'
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
